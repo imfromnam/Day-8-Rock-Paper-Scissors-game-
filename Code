@@ -1,0 +1,53 @@
+# Rock, Paper, Scissors 🎮 game
+import random 
+print ("Made by Geraldo Dieterle ")
+print("Rock✊, Paper✋ Scissors✌️\nplz pick a choice\n")
+choices = ["rock", "paper", "scissors"]
+
+while True:
+    computer = random.choice(choices)
+    player = None
+
+    while player not in choices:
+        player = input("Rock,Paper,Scissors? ").lower()
+
+    print("\n")
+    if player == computer:
+        print("computer: ", computer)
+        print("player: ", player)
+        print("tie👔 ")
+
+    elif player == "rock":
+        if computer == "paper":
+            print("computer: ", computer)
+            print("player: ", player)
+            print("You loss 😂 I'm better ")
+        elif computer == "scissors":
+            print("computer: ", computer)
+            print("player: ", player)
+            print("You win 😤 lucky")
+
+    elif player == "paper":
+        if computer == "scissors":
+            print("computer: ", computer)
+            print("player: ", player)
+            print("You loss 😂 I'm better ")
+        elif computer == "rock":
+            print("computer: ", computer)
+            print("player: ", player)
+            print("You win 😒 lucky")
+
+    elif player == "scissors":
+        if computer == "rock":
+            print("computer: ", computer)
+            print("player: ", player)
+            print("You loss 😂 I'm better ")
+        elif computer == "paper":
+            print("computer: ", computer)
+            print("player: ", player)
+            print("You win 😤 lucky")
+
+    play_again = input("play again (yes/no)? ").lower()
+    if play_again != "yes":
+        print("okay well play later bye 👋")
+        break
